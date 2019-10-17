@@ -5,7 +5,7 @@ const { replaceEmberObjectExpressions } = require('../helpers/parse-helper');
 const DEFAULT_OPTIONS = {
   decorators: true,
   classFields: true,
-  classicDecorator: false, // this doesn't want to read the command line arg :(
+  classicDecorator: false,
   quote: 'single',
 };
 

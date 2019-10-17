@@ -60,14 +60,21 @@ function hasValidProps(
       errors.push(`[${instanceProp.name}]: Need option '--class-fields=true'`);
     }
 
-    if (
-      instanceProp.type === 'ObjectExpression' &&
-      !['actions', 'queryParams'].includes(instanceProp.name)
-    ) {
-      errors.push(
-        `[${instanceProp.name}]: Transform not supported - value is of type object. For more details: eslint-plugin-ember/avoid-leaking-state-in-ember-objects`
-      );
-    }
+    // We can me better assumptions about the correctness of our app than the
+    // official codemod can about ember apps in general. This allows us to
+    // disable this leaky-state property check so that the codemod will port
+    // more property definitions to class fields. This isn't guaranteed to be
+    // correct for all cases but rather gives us a branching off point from
+    // which to manually confirm the behaviour is the same. - @22a
+    //
+    // if (
+    //   instanceProp.type === 'ObjectExpression' &&
+    //   !['actions', 'queryParams'].includes(instanceProp.name)
+    // ) {
+    //   errors.push(
+    //     `[${instanceProp.name}]: Transform not supported - value is of type object. For more details: eslint-plugin-ember/avoid-leaking-state-in-ember-objects`
+    //   );
+    // }
 
     if (instanceProp.isActions) {
       errors = errors.concat(getLifecycleHookErrors(instanceProp));

@@ -1,17 +1,17 @@
 {
-  "name": "ember-native-class-codemod",
-  "version": "1.1.0",
+  "name": "inter-native-class-internal-codemod",
+  "version": "2.0.0",
   "description": "Codemods for transforming ember app code to native class syntax with decorators.",
   "keywords": [
     "codemod-cli"
   ],
-  "homepage": "https://github.com/ember-codemods/ember-native-class-codemod#readme",
+  "homepage": "https://github.com/22a/ember-native-class-codemod#readme",
   "bugs": {
-    "url": "https://github.com/ember-codemods/ember-native-class-codemod/issues"
+    "url": "https://github.com/22a/ember-native-class-codemod/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ember-codemods/ember-native-class-codemod.git"
+    "url": "git+https://github.com/22a/ember-native-class-codemod.git"
   },
   "license": "MIT",
   "author": "",
