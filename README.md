@@ -1,4 +1,4 @@
-# ember-native-class-codemod
+# inter-native-class-internal-codemod
 
 [![Build Status](https://travis-ci.org/ember-codemods/ember-native-class-codemod.svg?branch=master)](https://travis-ci.org/ember-codemods/ember-native-class-codemod)
 [![npm version](https://badge.fury.io/js/ember-native-class-codemod.svg)](https://badge.fury.io/js/ember-native-class-codemod)
@@ -11,16 +11,16 @@ with decorators!
 First, install the dependencies that the codemod relies on. These are
 addons that the codemod will add imports from:
 
-```
-ember install ember-classic-decorator
+```bash
 ember install ember-decorators 
+# ember install ember-classic-decorator
 ```
 
 Then, boot up your application. Then, the codemod can be run using the
 following command:
 
 ```
-npx ember-native-class-codemod http://localhost:4200/path/to/server [OPTIONS] path/of/files/ or/some**/*glob.js
+npx inter-native-class-internal-codemod http://localhost:4200/path/to/server [OPTIONS] path/of/files/ or/some**/*glob.js
 ```
 
 The codemod accepts the following options:
@@ -29,7 +29,7 @@ The codemod accepts the following options:
 | --------------------- | ------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `--class-fields`      | boolean | `true`                          | Enable/disable transformation using class fields                                                                                                 |
 | `--decorators`        | boolean | `true`                          | Enable/disable transformation using decorators                                                                                                   |
-| `--classic-decorator` | boolean | `true`                          | Enable/disable adding the [`@classic` decorator](https://github.com/pzuraq/ember-classic-decorator), which helps with transitioning Ember Octane |
+| `--classic-decorator` | boolean | `false`                          | Enable/disable adding the [`@classic` decorator](https://github.com/pzuraq/ember-classic-decorator), which helps with transitioning Ember Octane |
 | `--type`              | String  | Empty (match all types in path) | Apply transformation to only passed type. The type can be one of `services`, `routes`, `components`, `controllers`                               |
 | `--quote`             | String  | `'single'`                      | Whether to use double or single quotes by default for new statements that are added during the codemod.                                          |
 

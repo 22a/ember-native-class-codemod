@@ -1,6 +1,6 @@
 {
   "name": "inter-native-class-internal-codemod",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "Codemods for transforming ember app code to native class syntax with decorators.",
   "keywords": [
     "codemod-cli"
@@ -23,7 +23,7 @@
   ],
   "main": ".eslintrc.js",
   "bin": {
-    "ember-native-class-codemod": "./bin/cli.js"
+    "inter-native-class-internal-codemod": "./bin/cli.js"
   },
   "directories": {
     "lib": "lib",
